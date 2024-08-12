@@ -1,35 +1,51 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Card from "./Card";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Form from "./Form";
 
 function App() {
 	const [inputField, setInputField] = useState(undefined);
+	const [countries, setCountries] = useState([]);
+
+	useEffect(() => {
+		async function fetchData() {
+			const response = await fetch("https://restcountries.com/v3.1/all");
+			const data = await response.json();
+			setCountries(data);
+		}
+
+		fetchData();
+	}, []);
+
+	//console.log(countries[0].name.common);
 
 	return (
 		<>
-			<div className="container">
-				<form>
-					<div className="inputField">
-						<input
-							type="search"
-							placeholder="Search for a country..."
-							value={inputField}
-							onChange={(e) => {
-								setInputField(e.target.value);
-							}}
-						/>
-						<i className="fas fa-search"></i>
-					</div>
-					<select id="region" name="region">
-						<option value="All" defaultValue>
-							All
-						</option>
-						<option value="Africa">Africa</option>
-						<option value="Americas">America</option>
-						<option value="Asia">Asia</option>
-						<option value="Europe">Europe</option>
-						<option value="Oceania">Oceania</option>
-					</select>
-				</form>
-			</div>
+			<Router>
+				{" "}
+				<Routes>
+					{" "}
+					<Route path="/:country" element={<h1>Hello</h1>} />{" "}
+					<Route
+						path="/"
+						element={
+							<div>
+								{" "}
+								<Form />{" "}
+								<div className="container">
+									{" "}
+									<div className="card-container">
+										{" "}
+										{countries.map((country) => (
+											<Card key={country.cca3} country={country} />
+										))}{" "}
+									</div>{" "}
+								</div>{" "}
+							</div>
+						}
+					/>{" "}
+				</Routes>{" "}
+			</Router>
 		</>
 	);
 }
