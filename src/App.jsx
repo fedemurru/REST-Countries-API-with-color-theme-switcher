@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import Card from "./Card";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
