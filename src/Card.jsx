@@ -10,7 +10,6 @@ function Card({ country }) {
 				padding: "20px",
 				margin: "10px",
 
-				maxWidth: "300px",
 				textAlign: "center",
 
 				backgroundColor: "#f9f9f9",
@@ -20,9 +19,11 @@ function Card({ country }) {
 				src={country.flags.svg}
 				alt={`${country.common} flag`}
 				style={{
-					width: "100%",
-					height: "auto",
-					borderRadius: "10px",
+					width: "100%", // Make the image take up the full width of its container
+					height: "auto", // Maintain the aspect ratio based on the width
+					maxHeight: "200px", // Limit the image's maximum height
+					maxWidth: "250px", // Limit the image's maximum width
+					borderRadius: "10px", // Add rounded corners to the image
 				}}
 			/>
 			<h2
