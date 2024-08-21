@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Form from "./Form";
+import Navbar from "./components/Navbar";
 
 function App() {
 	const [inputField, setInputField] = useState(undefined);
@@ -24,11 +25,12 @@ function App() {
 		<>
 			<Router>
 				<Routes>
-					<Route path="/:country" element={<h1>Hello</h1>} />{" "}
+					<Route path="/:country" element={<h1>Hello</h1>} />
 					<Route
 						path="/"
 						element={
 							<div>
+								<Navbar />
 								<Form />
 								<div className="container">
 									<div className="card-container">
