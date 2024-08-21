@@ -23,29 +23,24 @@ function App() {
 	return (
 		<>
 			<Router>
-				{" "}
 				<Routes>
-					{" "}
 					<Route path="/:country" element={<h1>Hello</h1>} />{" "}
 					<Route
 						path="/"
 						element={
 							<div>
-								{" "}
-								<Form />{" "}
+								<Form />
 								<div className="container">
-									{" "}
 									<div className="card-container">
-										{" "}
 										{countries.map((country) => (
 											<Card key={country.cca3} country={country} />
-										))}{" "}
-									</div>{" "}
-								</div>{" "}
+										))}
+									</div>
+								</div>
 							</div>
 						}
-					/>{" "}
-				</Routes>{" "}
+					/>
+				</Routes>
 			</Router>
 		</>
 	);
