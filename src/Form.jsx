@@ -4,8 +4,9 @@ function Form() {
 		padding: "10px",
 		fontSize: "16px", // Smaller font size for the select element
 		border: "1px solid #ccc", // Light border color
-
+		backgroundColor: "#ffffff",
 		boxSizing: "border-box", // Include padding in width/height calculation
+		color: "#333",
 	};
 
 	return (
