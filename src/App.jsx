@@ -29,7 +29,12 @@ function App() {
 					<Route
 						path="/"
 						element={
-							<div>
+							<div
+								style={{
+									margin: "0px",
+									backgroundColor: "#F2F2F2",
+								}}
+							>
 								<Navbar />
 								<Form />
 

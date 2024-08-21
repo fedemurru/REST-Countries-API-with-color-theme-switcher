@@ -1,11 +1,21 @@
 import { useState } from "react";
+import { CiSearch } from "react-icons/ci";
 
 function Form() {
 	const [inputField, setInputField] = useState(undefined);
+
+	const iconStyle = {
+		fontSize: "33px",
+		color: "black",
+
+		marginLeft: "15px",
+	};
+
 	return (
 		<div>
 			<form>
 				<div className="inputField">
+					<CiSearch style={iconStyle} />
 					<input
 						type="search"
 						placeholder="Search for a country..."

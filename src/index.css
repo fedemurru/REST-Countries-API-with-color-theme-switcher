@@ -106,14 +106,16 @@ input:focus {
 .inputField {
 	width: 35%;
 	border: 1px solid black;
+	display: flex;
+	margin-left: 30px;
+	align-items: center;
 }
 .inputField i {
-	margin-left: -308px;
 	font-size: large;
 }
 input {
 	width: 80%;
-	padding-left: 50px;
+	padding-left: 5px;
 	height: 38px;
 }
 select {

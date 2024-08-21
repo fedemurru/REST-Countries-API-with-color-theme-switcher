@@ -5,13 +5,9 @@ function Card({ country }) {
 		<div
 			style={{
 				border: "1px solid #ccc",
-				borderRadius: "10px",
 				boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-				padding: "20px",
 				margin: "10px",
-
 				textAlign: "center",
-
 				backgroundColor: "#f9f9f9",
 			}}
 		>
@@ -19,11 +15,10 @@ function Card({ country }) {
 				src={country.flags.svg}
 				alt={`${country.common} flag`}
 				style={{
-					width: "100%", // Make the image take up the full width of its container
-					height: "auto", // Maintain the aspect ratio based on the width
-					maxHeight: "200px", // Limit the image's maximum height
-					maxWidth: "250px", // Limit the image's maximum width
-					borderRadius: "10px", // Add rounded corners to the image
+					width: "100%",
+					height: "auto",
+					maxHeight: "200px",
+					maxWidth: "250px",
 				}}
 			/>
 			<h2

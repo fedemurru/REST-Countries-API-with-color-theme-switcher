@@ -11,9 +11,9 @@ function Navbar() {
 
 	const navStyle = {
 		backgroundColor: "white",
-		padding: "22px",
+		padding: "12px",
 		display: "flex",
-		borderBottom: "2px solid black",
+		borderBottom: "1px solid black",
 		justifyContent: "space-between",
 	};
 
