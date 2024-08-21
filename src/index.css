@@ -102,7 +102,7 @@ input:focus {
 }
 .inputField {
 	width: 35%;
-	border: 1px solid black;
+	border: 1px solid #ccc;
 	display: flex;
 	margin-left: 30px;
 	align-items: center;

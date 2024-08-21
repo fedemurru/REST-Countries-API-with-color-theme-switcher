@@ -5,7 +5,7 @@ function Input() {
 	const [inputField, setInputField] = useState(undefined);
 
 	const iconStyle = {
-		fontSize: "30px",
+		fontSize: "25px",
 		color: "black",
 		marginLeft: "15px",
 	};
