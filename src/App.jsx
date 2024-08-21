@@ -32,12 +32,19 @@ function App() {
 							<div>
 								<Navbar />
 								<Form />
-								<div className="container">
-									<div className="card-container">
-										{countries.map((country) => (
-											<Card key={country.cca3} country={country} />
-										))}
-									</div>
+
+								<div
+									style={{
+										display: "flex",
+										flexDirection: "row",
+										flexWrap: "wrap",
+										justifyContent: "center",
+										alignItems: "center",
+									}}
+								>
+									{countries.map((country) => (
+										<Card key={country.cca3} country={country} />
+									))}
 								</div>
 							</div>
 						}

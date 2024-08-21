@@ -9,6 +9,7 @@ function Card({ country }) {
 				boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
 				padding: "20px",
 				margin: "10px",
+
 				maxWidth: "300px",
 				textAlign: "center",
 
