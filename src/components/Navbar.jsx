@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { MdDarkMode } from "react-icons/md";
+import { MdOutlineDarkMode } from "react-icons/md";
 
 function Navbar() {
 	const [isDarkMode, setIsDarkMode] = useState(false);
@@ -11,16 +13,23 @@ function Navbar() {
 		backgroundColor: "white",
 		padding: "22px",
 		display: "flex",
-		borderBottom: "1px solid black",
+		borderBottom: "2px solid black",
 		justifyContent: "space-between",
-		alignItems: "center",
 	};
 
 	const linkStyle = {
 		color: "black",
 		textDecoration: "none",
+		display: "flex", // Align icon and text horizontally
+		alignItems: "center",
 		padding: "8px",
 		fontWeight: "bold",
+	};
+
+	const iconStyle = {
+		marginRight: "7px",
+		marginTop: "8px",
+		fontSize: "1.5rem",
 	};
 
 	return (
@@ -31,6 +40,9 @@ function Navbar() {
 
 			<div>
 				<a onClick={toggleDarkMode} style={linkStyle}>
+					<span style={iconStyle}>
+						{isDarkMode ? <MdDarkMode /> : <MdOutlineDarkMode />}
+					</span>
 					{isDarkMode ? "Light Mode" : "Dark Mode"}
 				</a>
 			</div>
